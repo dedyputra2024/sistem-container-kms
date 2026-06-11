@@ -1,62 +1,70 @@
-# Sistem Informasi Pencatatan Container - PT Kepri Mega Sejahtera
+# 📦 Sistem Informasi Pencatatan Container
 
-Aplikasi ini dibuat menggunakan PHP Native, MySQL, HTML, CSS, dan sedikit JavaScript. Aplikasi dapat dijalankan di Laragon tanpa framework tambahan.
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-## Fitur Utama
+Sistem informasi berbasis web untuk mengelola pencatatan container di area gudang PT Karya Mandiri Sejahtera — mulai dari container masuk, pemantauan status, hingga pencatatan keluar dan tujuan pengiriman.
 
-1. Login multi-user.
-2. Hak akses: Admin, Staf Gudang, dan Pimpinan.
-3. Dashboard ringkasan container.
-4. CRUD data container.
-5. Pencatatan container keluar.
-6. Pencarian dan filter berdasarkan nomor container, status, dan tanggal.
-7. Laporan periode, cetak laporan, dan export CSV.
-8. Manajemen pengguna oleh admin.
-9. Log aktivitas sederhana.
+---
 
-## Cara Menjalankan di Laragon
+## ✨ Fitur
 
-1. Extract folder `sistem-container-kms` ke:
+- 🔐 Login dengan 3 role: **Admin**, **Staf Gudang**, **Pimpinan**
+- 📊 Dashboard ringkasan data container (total, di gudang, keluar, input hari ini)
+- 📦 Manajemen data container (tambah, edit, hapus, catat keluar)
+- 🔍 Pencarian & filter data berdasarkan status dan tanggal
+- 📄 Laporan harian & bulanan dengan filter status
+- 📥 Export laporan ke **CSV**
+- 🖨️ Cetak laporan langsung dari browser
+- 👥 Manajemen pengguna & hak akses
+- 🏢 Profil perusahaan & ruang lingkup sistem
 
-   `C:\laragon\www\sistem-container-kms`
+---
 
-2. Buka Laragon, klik **Start All** untuk menjalankan Apache dan MySQL.
+## 🛠️ Teknologi
 
-3. Buka database manager Laragon, misalnya HeidiSQL/phpMyAdmin.
+- **Backend:** PHP Native
+- **Database:** MySQL
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Server:** Apache (XAMPP / Laragon)
+- **Metode:** RAD (Rapid Application Development)
 
-4. Import file:
+---
 
-   `database.sql`
+## ⚙️ Cara Menjalankan
 
-   File tersebut otomatis membuat database `db_container_kms` beserta tabel dan akun demo.
+1. Clone repo ini:
+   ```bash
+   git clone https://github.com/dedyputra2024/sistem-container-kms.git
+   ```
+2. Pindahkan folder ke direktori server lokal (`htdocs` / `www`)
+3. Import file `database.sql` ke MySQL via phpMyAdmin
+4. Sesuaikan konfigurasi database di file `database.php`:
+   ```php
+   $host = 'localhost';
+   $user = 'root';
+   $pass = '';
+   $db   = 'nama_database';
+   ```
+5. Buka di browser: `http://localhost/sistem-container-kms`
 
-5. Buka browser:
+---
 
-   `http://localhost/sistem-container-kms/`
-
-## Akun Login Demo
+## 👤 Akun Default
 
 | Role | Username | Password |
-|---|---|---|
-| Admin | admin | admin123 |
-| Staf Gudang | staf | staf123 |
-| Pimpinan | pimpinan | pimpinan123 |
+|------|----------|----------|
+| Admin | `admin` | `admin` |
+| Staf Gudang | `staf` | `staf` |
+| Pimpinan | `pimpinan` | `pimpinan` |
 
-## Konfigurasi Database
+> ⚠️ Segera ganti password setelah instalasi!
 
-File konfigurasi berada di:
+---
 
-`config/database.php`
+## 👨‍💻 Developer
 
-Default Laragon:
-
-- Host: `localhost`
-- Database: `db_container_kms`
-- Username: `root`
-- Password: kosong
-
-Jika MySQL di komputer Anda memakai password, ubah nilai `$password` pada file tersebut.
-
-## Catatan Akademik
-
-Aplikasi ini disesuaikan dengan proposal penelitian berjudul "Perancangan Sistem Informasi Pencatatan Container pada PT Kepri Mega Sejahtera". Ruang lingkup fitur mengikuti batasan: pencatatan nomor container, jenis/ukuran, isi muatan, kondisi fisik, tanggal masuk, tanggal keluar, tujuan pengiriman, status, pencarian, dan laporan.
+**Dedy Saputra** — Project 2026  
+[github.com/dedyputra2024](https://github.com/dedyputra2024)
